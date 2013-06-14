@@ -14,16 +14,6 @@
 			socket.onerror = onError;
 			socket.onclose = onClose;
 	
-			
-			function sendMessage(path, message) {
-				path = "/sdcchat";
-				message = document.getElementById("text").value;
-				path += '?message=' + message;
-				var xhr = new XMLHttpRequest();
-				xhr.open('POST', path, true);
-				xhr.send();
-			};
-	
 			function onOpened() {
 				//alert("Channel opened!");
 			}
@@ -45,7 +35,7 @@
 		
 		<!-- Send messages : simple ajax post -->
 		<script>
-			function sendMessage(path, message) {
+			function sendMessage() {
 				path = "/sdcchat";
 				message = document.getElementById("text").value;
 				path += '?message=' + message;
